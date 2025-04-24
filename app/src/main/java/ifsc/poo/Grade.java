@@ -15,6 +15,7 @@ public class Grade {
     public void desenhar(Draw draw) {
         for (int linha = 0; linha < 10; linha++) {
             for (int coluna = 0; coluna < 10; coluna++) {
+                //vai para o quadrado certo, depois centraliza ele (+20, que seria a divisão)
                 double cx = x + coluna * tamanhoCelula + tamanhoCelula / 2;
                 double cy = y + linha * tamanhoCelula + tamanhoCelula / 2;
                 draw.rectangle(cx, cy, tamanhoCelula / 2, tamanhoCelula / 2);
