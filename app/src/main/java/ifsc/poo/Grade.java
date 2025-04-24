@@ -2,6 +2,8 @@
 package ifsc.poo;
 import edu.princeton.cs.algs4.Draw;
 
+import java.awt.*;
+
 public class Grade {
     private double x;
     private double y;
@@ -24,12 +26,15 @@ public class Grade {
 
         // Rótulos de linhas (A a J)
         for (int i = 0; i < 10; i++) {
+
             char letra = (char) ('A' + i);
+            draw.setPenColor(new Color(153, 0, 0)); // mesma cor dos rótulos (vermelho escuro)
             draw.text(x - 10, y + i * tamanhoCelula + tamanhoCelula / 2, "" + letra);
         }
 
         // Rótulos de colunas (0 a 9)
         for (int i = 0; i < 10; i++) {
+            draw.setPenColor(new Color(153, 0, 0)); // mesma cor dos rótulos (vermelho escuro)
             draw.text(x + i * tamanhoCelula + tamanhoCelula / 2, y - 10, "" + i);
         }
     }

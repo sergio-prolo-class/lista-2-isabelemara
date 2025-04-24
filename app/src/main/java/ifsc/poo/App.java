@@ -5,7 +5,7 @@ import edu.princeton.cs.algs4.Draw;
 
 
 public class App {
-    Draw draw;
+    static Draw draw;
 
     public App(){
         this.draw = new Draw();
@@ -19,7 +19,7 @@ public class App {
     //desenha a grade
     public void iniciar(){
 
-        Grade grade = new Grade(100,100);
+        Grade grade = new Grade(50,50);
         grade.desenhar(draw);
 
 
@@ -28,6 +28,9 @@ public class App {
         App app = new App();
         app.draw.show();
         app.iniciar();
+
+        Navio navio = new Navio(5, 3, 2, true); // x=3, y=2, tamanho=5, vertical
+        navio.desenhar(draw);
     }
 
 }
