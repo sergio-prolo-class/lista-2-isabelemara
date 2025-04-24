@@ -16,7 +16,7 @@ public class App {
 
 
     }
-
+    //desenha a grade
     public void iniciar(){
 
         Grade grade = new Grade(100,100);

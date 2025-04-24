@@ -5,6 +5,7 @@ import edu.princeton.cs.algs4.Draw;
 public class Grade {
     private double x;
     private double y;
+    private double tamanhoCelula = 40;
 
     public Grade(double x, double y) {
         this.x = x;
@@ -12,18 +13,12 @@ public class Grade {
     }
 
     public void desenhar(Draw draw) {
-        int tamanhoCelula = 40;
-
-        // Desenha as linhas horizontais
-        for (int i = 0; i <= 10; i++) {
-            double yLinha = y + i * tamanhoCelula;
-            draw.line(x, yLinha, x + 10 * tamanhoCelula, yLinha);
-        }
-
-        // Desenha as colunas verticais
-        for (int i = 0; i <= 10; i++) {
-            double xColuna = x + i * tamanhoCelula;
-            draw.line(xColuna, y, xColuna, y + 10 * tamanhoCelula);
+        for (int linha = 0; linha < 10; linha++) {
+            for (int coluna = 0; coluna < 10; coluna++) {
+                double cx = x + coluna * tamanhoCelula + tamanhoCelula / 2;
+                double cy = y + linha * tamanhoCelula + tamanhoCelula / 2;
+                draw.rectangle(cx, cy, tamanhoCelula / 2, tamanhoCelula / 2);
+            }
         }
 
         // Rótulos de linhas (A a J)
