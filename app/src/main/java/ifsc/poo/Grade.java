@@ -15,6 +15,7 @@ public class Grade {
     }
 
     public void desenhar(Draw draw) {
+        draw.setPenColor(Color.BLACK);
         for (int linha = 0; linha < 10; linha++) {
             for (int coluna = 0; coluna < 10; coluna++) {
                 //vai para o quadrado certo, depois centraliza ele (+20, que seria a divisão)
