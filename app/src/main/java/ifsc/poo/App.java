@@ -19,9 +19,11 @@ public class App {
     //desenha a grade
     public void iniciar(){
 
-        Grade grade = new Grade(50,50);
-        grade.desenhar(draw);
+        Grade grade1 = new Grade(50, 50);
+        grade1.desenhar(draw);
 
+        Grade grade2 = new Grade(550, 50);
+        grade2.desenhar(draw);
 
     }
     public static void main(String[] args) {
@@ -29,8 +31,17 @@ public class App {
         app.draw.show();
         app.iniciar();
 
-        Navio navio = new Navio(5, 3, 2, true); // x=3, y=2, tamanho=5, vertical
+        //fiz os navios manualmente
+        Navio navio = new Navio(5, 3, 2, true);// x=3, y=2, tamanho=5, vertical
+        Navio navio1 = new Navio(4, 0, 0, false);
+        Navio navio2 = new Navio(2, 1, 8, false);
+        Navio navio3 = new Navio(3, 5, 1, true);
+        Navio navio4 = new Navio(3, 7, 5, true);
         navio.desenhar(draw);
+        navio1.desenhar(draw);
+        navio2.desenhar(draw);
+        navio3.desenhar(draw);
+        navio4.desenhar(draw);
     }
 
 }
