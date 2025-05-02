@@ -16,9 +16,7 @@ public class Navio {
     }
 
     public void desenhar(Draw draw) {
-        draw.setPenColor(new Color(153, 0, 0)); // mesma cor dos rótulos (vermelho escuro)
-
-        int offsetX = 50; //centro que começa a grade
+        int offsetX = 50;
         int offsetY = 50;
 
         for (int i = 0; i < tamanho; i++) {
@@ -32,9 +30,17 @@ public class Navio {
                 centroY = (y * 40) + 20 + offsetY;
             }
 
+            // Preencher com cor do navio
+            draw.setPenColor(new Color(153, 0, 0));
             draw.filledRectangle(centroX, centroY, 20, 20);
+
+            // Agora mudar para cor preta e desenhar contorno
+            draw.setPenColor(Color.BLACK);
+            draw.rectangle(centroX, centroY, 20, 20);
         }
     }
+
+
 }
 
 
