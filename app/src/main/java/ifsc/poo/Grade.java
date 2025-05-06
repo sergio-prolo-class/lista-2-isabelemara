@@ -5,22 +5,28 @@ import edu.princeton.cs.algs4.Draw;
 import java.awt.*;
 
 public class Grade {
-    private double x;
-    private double y;
-    private double tamanhoCelula = 40;
+    private double x; //posição inicial de x
+    private double y; //posição inicial de x
+    private double tamanhoCelula = 40; //tamanho do quadrado 40x40
 
+
+    //constroi a grade
     public Grade(double x, double y) {
         this.x = x;
         this.y = y;
     }
-
+    //desenha a grade completa
     public void desenhar(Draw draw) {
-        draw.setPenColor(Color.BLACK);
+        draw.setPenColor(Color.BLACK); //cor preta
+
+        // Desenha os quadrados da grade 10x10
         for (int linha = 0; linha < 10; linha++) {
             for (int coluna = 0; coluna < 10; coluna++) {
                 //vai para o quadrado certo, depois centraliza ele (+20, que seria a divisão)
                 double cx = x + coluna * tamanhoCelula + tamanhoCelula / 2;
                 double cy = y + linha * tamanhoCelula + tamanhoCelula / 2;
+
+                // Desenha o quadrado (só o contorno)
                 draw.rectangle(cx, cy, tamanhoCelula / 2, tamanhoCelula / 2);
             }
         }

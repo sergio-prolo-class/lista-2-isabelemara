@@ -16,27 +16,30 @@ public class App {
 
 
     }
-    //desenha a grade
+
+    // Método que desenha as duas grades (do jogador e do inimigo)
     public void desenhargrade(){
 
         Grade grade1 = new Grade(50, 50);
-        grade1.desenhar(draw);
+        grade1.desenhar(draw); //grade esquerda
 
         Grade grade2 = new Grade(550, 50);
-        grade2.desenhar(draw);
+        grade2.desenhar(draw); //grade direita
 
     }
     public static void main(String[] args) {
-        App app = new App();
-        app.draw.show();
-        app.desenhargrade();
+        App app = new App(); //cria e inicia
+        app.draw.show(); //mostra janela
+        app.desenhargrade(); //desenha duas grades
 
-        //fiz os navios manualmente
-        Navio navio = new Navio(5, 3, 2, true);// x=3, y=2, tamanho=5, vertical
-        Navio navio1 = new Navio(4, 0, 0, false);
-        Navio navio2 = new Navio(2, 1, 8, false);
-        Navio navio3 = new Navio(3, 5, 1, true);
-        Navio navio4 = new Navio(3, 7, 5, true);
+        // Criação manual dos navios com posição, tamanho e orientação
+        Navio navio = new Navio(5, 3, 2, true);     // navio de 5 blocos, na vertical
+        Navio navio1 = new Navio(4, 0, 0, false);   // navio de 4 blocos, na horizontal
+        Navio navio2 = new Navio(2, 1, 8, false);   // navio pequeno horizontal
+        Navio navio3 = new Navio(3, 5, 1, true);    // navio vertical de 3
+        Navio navio4 = new Navio(3, 7, 5, true);    // outro vertical
+
+        //desenha os navios na grade
         navio.desenhar(draw);
         navio1.desenhar(draw);
         navio2.desenhar(draw);
