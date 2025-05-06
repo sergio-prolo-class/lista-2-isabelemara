@@ -8,6 +8,7 @@ Lista 2
 Esse projeto é uma simulação simples de Batalha Naval feita em Java, usando a biblioteca algs4 do Princeton para desenhar tudo na tela. A ideia é criar duas grades (uma do jogador e outra do oponente) e posicionar navios nelas.
 
 🗂️ Arquivos e o que cada um faz
+
 O projeto tem três classes principais:
 
 App.java: é a classe principal, onde o programa começa a rodar.
