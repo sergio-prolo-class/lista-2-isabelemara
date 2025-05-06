@@ -4,7 +4,7 @@ Aluno(a): Isabele M. Batisti
 Lista 2
 
 
-🛥️ Projeto Batalha Naval em Java
+🛥️ Projeto Batalha Naval em Java:
 Esse projeto é uma simulação simples de Batalha Naval feita em Java, usando a biblioteca algs4 do Princeton para desenhar tudo na tela. A ideia é criar duas grades (uma do jogador e outra do oponente) e posicionar navios nelas.
 
 🗂️ Arquivos e o que cada um faz
@@ -16,7 +16,7 @@ Grade.java: desenha a grade (ou tabuleiro) onde os navios vão ficar.
 
 Navio.java: representa o navio e é onde a gente desenha ele na grade.
 
-🔧 Classe App.java
+🔧 Classe App.java:
 Essa é a classe principal, onde tudo começa.
 
 Construtor App()
@@ -42,7 +42,7 @@ Depois, criamos 5 navios manualmente, com posições e tamanhos diferentes.
 
 Cada navio é desenhado usando o método desenhar() da classe Navio.
 
-🎯 Classe Grade.java
+🎯 Classe Grade.java:
 Essa classe serve para desenhar a grade 10x10.
 
 Atributos:
@@ -59,7 +59,7 @@ Depois ele escreve as letras (A até J) nas linhas e os números (0 a 9) nas col
 
 Os rótulos são desenhados na mesma cor dos navios (vermelho escuro) pra ficar estiloso.
 
-🚢 Classe Navio.java
+🚢 Classe Navio.java:
 Essa classe representa um navio do jogo.
 
 Atributos:
@@ -78,7 +78,7 @@ Desenha um quadrado vermelho escuro (filledRectangle).
 
 Depois, desenha o contorno preto (rectangle) para a grade continuar aparecendo por cima.
 
-💬 Observações Finais
+💬 Observações Finais:
 Como os navios são preenchidos com cor, eles escondem a grade. Por isso, eu desenhei um contorno preto depois de preencher, pra dar aquele efeito de "navio dentro da grade".
 
 A posição dos navios é feita manualmente, mas daria pra fazer aleatório também.
